@@ -1,0 +1,19 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<title>Cliente</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="offset-4 col-10 lista-div"><br>
+    <h3>Dados do Cliente: {{ cliente.razao_social }}</h3><br>
+    <h5 class="edicao_cnpj">{{ cliente.cnpj }}</h5>
+    <h5>Cidade: {{ cliente.cidade }}</h5>
+    <h5>Tipo: {{ cliente.tipo }}</h5>
+    <h5>Ativo: {{ cliente.ativo }}</h5><br>
+    <a href="{% url 'editar/' cliente.pk %}"><button type="button" class="btn btn-primary">Alterar</button></a>
+    <a href="{% url 'deletar/' cliente.pk %}"><button type="button" class="btn btn-danger">Excluir</button></a>
+</div>
+{% endblock %}

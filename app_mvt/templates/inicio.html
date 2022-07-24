@@ -1,0 +1,30 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<title>Início</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="offset-1 col-10 lista-div">
+
+    <a href="cadastrar/">
+      <div class="col-2 add-div">
+        <i class="fas fa-plus"></i> Nova Empresa
+      </div>
+    </a><br><br><br><br>
+
+    {% for cliente in object_list %}
+    <ul class="empresas-lista">
+      <li class="empresas-item">
+        <span><a href="cliente/{{cliente.id}}">{{ cliente.razao_social }}</a></span>
+        <span class="ativo">{{ cliente.ativo }}</span>
+        <span><a href="{% url 'deletar/' cliente.pk %}"><i class="fas fa-trash"></i></a></span>
+        <span><a href="{% url 'editar/' cliente.pk %}"><i class="fas fa-edit"></i></a></span>
+      </li>
+    </ul>
+    {% endfor %}
+
+</div>
+{% endblock %}

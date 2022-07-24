@@ -1,0 +1,11 @@
+venv/
+
+app_mvt/__pycache__/
+
+app_mvt/migrations/__pycache__/
+
+projeto_mvt/__pycache__/
+
+instrucoes.txt
+
+database.sql

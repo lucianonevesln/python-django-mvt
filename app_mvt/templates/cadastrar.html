@@ -1,0 +1,21 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<title>Cadastro</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="offset-4 col-10 lista-div">
+
+  <h2>Cadastrar Cliente</h2>
+
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form><br>
+
+</div>
+{% endblock %}
