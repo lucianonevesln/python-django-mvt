@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'projeto_mvt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'projetos',
+        'NAME': 'youtan',
         'USER': os.getenv("MYSQL_DATABASE_USER"),
         'PASSWORD': os.getenv("MYSQL_DATABASE_PASSWORD"),
         'HOST': os.getenv("MYSQL_DATABASE_HOST"),
